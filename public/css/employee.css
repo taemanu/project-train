@@ -1,0 +1,147 @@
+/* employee */
+.home_content .table-boxes{
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 15px 14px;
+    border-radius: 12px;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px 0 20px;
+}
+
+.home_content .employee-boxes .box_toppic{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.home_content .employee-boxes .box{
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 14px;
+    width: calc(100% / 3 - 15px);
+    border-radius:12px;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.home_content .employee-boxes .number{
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: -5px;
+    text-align: center;
+}
+
+/* .employee-boxes .indicator{
+    display: flex;
+    align-items: center;
+}
+
+.employee-boxes .indicator i{
+   height: 25px;
+   width: 25px;
+   background: #8fdacb;
+   color: #fff;
+   border-radius: 50%;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.employee-boxes .indicator .text{
+    font-size: 12px;
+} */
+
+
+/* .employee-boxes .box .cart{
+    font-size: 32px;
+    font-weight: 50px;
+    height: 50px;
+    width: 50px;
+    background: #cce5ff;
+    color: #66b0ff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.employee-boxes .box .cart.two{
+    background: #C0F2d8;
+    color: #2bd47d;
+}
+
+.employee-boxes .box .cart.three{
+    background: #f0efd6;
+    color: #ffc233;
+}
+
+.employee-boxes .box .cart.four{
+    background: #f0d6d6;
+    color: #ff3333;
+} */
+
+.home_content .employee-boxes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1018px) {
+    .home_content .employee-boxes .box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+
+@media (max-width: 658px){
+    .home_content .employee-boxes .box{
+        width: 100%;
+
+    }
+
+    .home_content .sales-boxes .sales-details{
+        width: 590px;
+    }
+
+    .sidebar #btn{
+        display:none;
+   }
+}
+
+
+.table-boxes i{
+    font-size: 18px;
+}
+
+.table-boxes i:hover{
+    font-size: 25px;
+    cursor:pointer;
+}
+
+
+.home_content .error-boxes{
+    display: flex;
+    align-items: center;
+    padding: 15px 14px;
+    border-radius: 12px;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px 0 20px;
+}
+
+
+@media (max-width: 675px){
+    .home_content .table-boxes{
+        width: 590px;
+    }
+}
+
+

@@ -1,0 +1,240 @@
+.home_content .overview-boxes .box_toppic{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home_content .overview-boxes .box{
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 15px 14px;
+    width: calc(100% / 4 - 15px);
+    border-radius:12px;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home_content .overview-boxes .number{
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.overview-boxes .indicator{
+    display: flex;
+    align-items: center;
+}
+
+.overview-boxes .indicator i{
+   height: 20px;
+   width: 20px;
+   background: #8fdacb;
+   color: #fff;
+   border-radius: 50%;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.overview-boxes .indicator .text{
+    font-size: 12px;
+}
+
+
+.overview-boxes .box .cart{
+    font-size: 32px;
+    font-weight: 50px;
+    height: 50px;
+    width: 50px;
+    background: #cce5ff;
+    color: #66b0ff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.overview-boxes .box .cart.two{
+    background: #C0F2d8;
+    color: #2bd47d;
+}
+
+.overview-boxes .box .cart.three{
+    background: #f0efd6;
+    color: #ffc233;
+}
+
+.overview-boxes .box .cart.four{
+    background: #f0d6d6;
+    color: #ff3333;
+}
+
+.home_content .overview-boxes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1018px) {
+    .home_content .overview-boxes .box{
+        width: calc(100% / 2 - 15px);
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+/* salecontenct */
+
+.home_content .sales-boxes .box .title{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.home_content .sales-boxes{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+}
+
+.home_content .sales-boxes .box .topic{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home_content .sales-boxes .box li{
+    list-style: none;
+    margin: 8px 0;
+}
+
+.home_content .sales-boxes .box ul{
+    padding-left: 0;
+}
+
+.sales-boxes .box li a{
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.home_content .sales-boxes .sales-details{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.home_content .sales-boxes .recent-sale{
+    width: 65%;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 20px;
+
+}
+
+/* {{-- right-side --}} */
+.home_content .sales-boxes .top-sales{
+    width: 35%;
+    margin-left: 20px;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.sales-boxes .button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sales-boxes .recent-sale .button a{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    background:#0A2558;
+    padding: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition:all 0.3s ease;
+}
+
+.sales-boxes .button a:hover{
+    background: #0d3073;
+}
+
+.sales-boxes .top-sales img{
+    margin-right: 6px;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.sales-boxes .top-sales li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sales-boxes .top-sales li a{
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 1078px){
+
+    .home_content .sales-boxes{
+        flex-direction: column;
+    }
+
+    .home_content .sales-boxes .box{
+        margin-bottom: 20px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .home_content .sales-boxes .top-sales{
+        margin-left: 0;
+
+    }
+
+    body{
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 658px){
+    .home_content .overview-boxes .box{
+        width: 100%;
+    }
+
+    .home_content .sales-boxes .sales-details{
+        width: 590px;
+    }
+
+    .sidebar #btn{
+        display:none;
+   }
+}
+
+.btn-outline-secondary{
+    border-color: #c7c8c9;
+}
+
+
+
+td{
+    vertical-align: middle;
+}
+
+
+.cart-boxes input::-webkit-outer-spin-button,
+.cart-boxes input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
