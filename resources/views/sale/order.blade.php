@@ -38,25 +38,27 @@
                             <td style='text-align:center'>{{ $item->code }}</td>
                             <td style='text-align:center'>{{ number_format($item->total_item) }} ชิ้น</td>
                             <td style='text-align:center'>{{ number_format($item->total_price) }} บาท</td>
-                            <td style='text-align:center'>{{ $item->date }}</td>
+                            <td style='text-align:center'>{{ \Carbon\Carbon::parse( $item->date )->format('d/m/Y G:i:s') }}</td>
                             <td style='text-align:center'>
                                 {{ $item->nameuser->first_name . ' ' . $item->nameuser->last_name }}
                             </td>
                             <td style='text-align:center'>
-                                @if ($item->status == true)
+                                @if ($item->status == 1)
                                     <h5><span class="badge bg-success">สำเร็จ</span></h5>
-                                @else
+                                @elseif ($item->status == 0)
                                     <h5><span class="badge bg-danger">ไม่สำเร็จ</span></h5>
+                                @else
+                                <h5><span class="badge bg-warning">รอการชำระเงิน</span></h5>
                                 @endif
                             </td>
                             <td style='text-align:center'>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#order_detail{{ $item->id }}"
+                                    class="btn btn-primary">สถานะ</a>
 
                                 <a href="order_detail{{ $item->id }}"  class="btn btn-secondary"><i
                                         class='bx bx-search'></i>
                                 </a>
 
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#order_detail{{ $item->id }}"
-                                    class="btn btn-primary">สถานะ</a>
                             </td>
                         </tr>
         </div>

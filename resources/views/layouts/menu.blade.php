@@ -97,14 +97,14 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bx-chart'></i>
+                        <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานยอดขาย</span>
                     </a>
                     <span class="tooltips">รายงานยอดขาย</span>
                 </li>
                  <li>
                     <a href="#">
-                        <i class='bx bx-chart'></i>
+                        <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานสินค้าคงคลัง</span>
                     </a>
                     <span class="tooltips">รายงานสินค้าคงคลัง</span>
@@ -140,14 +140,14 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bx-chart'></i>
+                        <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานยอดขาย</span>
                     </a>
                     <span class="tooltips">รายงานยอดขาย</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bx-chart'></i>
+                        <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานสินค้าคงคลัง</span>
                     </a>
                     <span class="tooltips">รายงานสินค้าคงคลัง</span>

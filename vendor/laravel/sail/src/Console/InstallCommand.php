@@ -105,7 +105,7 @@ class InstallCommand extends Command
 
         // Replace Selenium with ARM base container on Apple Silicon...
         if (in_array('selenium', $services) && php_uname('m') === 'arm64') {
-            $dockerCompose = str_replace('selenium/standalone-chrome', 'seleniarm/standalone-chromium', $dockerCompose);
+            $stubs = str_replace('selenium/standalone-chrome', 'seleniarm/standalone-chromium', $stubs);
         }
 
         // Remove empty lines...

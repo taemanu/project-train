@@ -67,11 +67,11 @@ class HandleExceptions
      */
     public function handleError($level, $message, $file = '', $line = 0, $context = [])
     {
-        if ($this->isDeprecation($level)) {
-            return $this->handleDeprecation($message, $file, $line);
-        }
-
         if (error_reporting() & $level) {
+            if ($this->isDeprecation($level)) {
+                return $this->handleDeprecation($message, $file, $line);
+            }
+
             throw new ErrorException($message, 0, $level, $file, $line);
         }
     }

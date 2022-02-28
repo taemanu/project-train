@@ -30,11 +30,20 @@
                 </div>
                 <div class="row">
                     <div class="col m-2">
-                        <label for="status" class="form-label">จัดการ</label>
-                        <select class="form-select" aria-label="status" Name="status">
+                        <label for="status" class="form-label">จัดการ</label><br>
+
+                        {{-- <select class="form-select" aria-label="status" Name="status">
                             <option value="1"> + เพิ่มจำนวนสินค้า</option>
                             <option value="0"> - ลดจำนวนสินค้า</option>
-                        </select>
+                        </select> --}}
+                        <div class="d-flex flex-row gap-2">
+                            <label class="radio-up">
+                                <input type="radio" name="status" value="1" checked> <span><i class='bx bxs-up-arrow' style='font-size:12px'></i> เพิ่มจำนวนสินค้า</span>
+                            </label>
+                            <label class="radio-down">
+                                <input type="radio" name="status" value="0"> <span><i class='bx bxs-down-arrow' style='font-size:12px'></i> ลดจำนวนสินค้า</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="col m-2">
                         <label for="amount" class="form-label">จำนวน</label>

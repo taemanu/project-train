@@ -14,7 +14,7 @@ class AddStatusToOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->boolean('status')->default(true)->after('date');
+            $table->tinyint(1)->default(3)->after('date');
         });
     }
 

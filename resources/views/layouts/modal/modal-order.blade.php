@@ -19,7 +19,9 @@
                         <div class="mb-2">
                             <label for="Status" class="form-label">สถานะ</label>
                             <select class="form-select" aria-label="Status" name="Status">
-                                <option value="1" {{ old('status', $item->status) === 1 ? 'selected' : '' }}>ใช้งาน
+                                <option value="1" {{ old('status', $item->status) === 1 ? 'selected' : '' }}>สำเร็จ
+                                </option>
+                                <option value="3" {{ old('status', $item->status) === 3 ? 'selected' : '' }}>รอดำเนินการ
                                 </option>
                                 <option value="0" {{ old('status', $item->status) === 0 ? 'selected' : '' }}>ไม่สำเร็จ
                                 </option>

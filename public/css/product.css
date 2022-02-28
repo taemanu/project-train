@@ -147,3 +147,67 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin: 20px 20px 0 20px;
 }
+
+
+label.radio-up {
+    cursor: pointer;
+    width: 100%
+}
+
+label.radio-up input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio-up span {
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #198762;
+    display: inline-block;
+    color: #198762;
+    border-radius: 0.25rem;
+    text-transform: uppercase
+}
+
+label.radio-up input:checked+span {
+    border-color: #198762;
+    background-color: #198762;
+    color: #fff
+}
+
+
+label.radio-down {
+    cursor: pointer;
+    width: 100%
+}
+
+label.radio-down input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio-down span {
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #DC3545;
+    display: inline-block;
+    color: #DC3545;
+    border-radius: 0.25rem;
+    text-transform: uppercase
+}
+
+label.radio-down input:checked+span {
+    border-color: #DC3545;
+    background-color: #DC3545;
+    color: #fff
+}

@@ -1,6 +1,8 @@
 .home_content .overview-boxes .box_toppic{
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
+    color: #3c3535;
 }
 
 .home_content .overview-boxes .box{
@@ -18,19 +20,21 @@
     font-size: 35px;
     font-weight: 500;
     margin-top: -5px;
-    display: inline-block;
+    /* display: inline-block; */
+    text-align: end;
 }
 
 .overview-boxes .indicator{
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .overview-boxes .indicator i{
    height: 20px;
    width: 20px;
-   background: #8fdacb;
-   color: #fff;
+   color: #3c3535;
    border-radius: 50%;
     font-size: 20px;
     margin-right: 5px;
@@ -38,6 +42,34 @@
 
 .overview-boxes .indicator .text{
     font-size: 12px;
+    color: #3c3535;
+}
+
+.overview-boxes .box.one{
+    background: #FF5555c5;
+    color: rgb(0, 0, 0);
+    border-left: 5px solid #ef3232;
+}
+
+.overview-boxes .box.two{
+    background: #79C447c5;
+   color: rgb(0, 0, 0);
+   border-left: 5px solid #4dab0f;
+}
+.overview-boxes .box.three{
+    background: #FABB3Dc5;
+   color: rgb(0, 0, 0);
+   border-left: 5px solid #fda901;
+}
+.overview-boxes .box.four{
+    background: #67C2EFc5;
+   color: rgb(0, 0, 0);
+   border-left: 5px solid #43bdf9;
+}
+
+.number span.text{
+    font-size: 18px;
+    color: #3c3535;
 }
 
 
@@ -120,10 +152,18 @@
     text-decoration: none;
 }
 
+.sales-boxes .box li span.badge{
+    font-size: 17px;
+    font-weight: 400;
+    width: -webkit-fill-available;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 .home_content .sales-boxes .sales-details{
     display: flex;
     justify-content:space-between;
     align-items: center;
+
 }
 
 .home_content .sales-boxes .recent-sale{
@@ -155,9 +195,11 @@
     font-size: 15px;
     font-weight: 400;
     color: #fff;
-    background:#0A2558;
+    background:#212529;
     padding: 4px;
-    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
     text-decoration: none;
     transition:all 0.3s ease;
 }
@@ -169,9 +211,9 @@
 .sales-boxes .top-sales img{
     margin-right: 6px;
     height: 40px;
-    width: 40px;
+    width: 30px;
     border-radius: 4px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .sales-boxes .top-sales li{
@@ -184,6 +226,9 @@
     display: flex;
     align-items: center;
 }
+
+
+
 
 
 @media (max-width: 1078px){

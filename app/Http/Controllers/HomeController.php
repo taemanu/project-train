@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Order;
 use Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class HomeController extends Controller
@@ -27,7 +29,38 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $order_count = [
+            Order::all()->where('status','<>',0)->count(),
+            // $order_time = Order::select('date')->where('status', 1)->orderBy('id', 'DESC')->first(),
+            Order::query()->orderBy('id', 'DESC')->first()->date,
+
+            Order::query()->where('status',1)->sum('total_price'),
+
+            Order::all()->where('status', 3)->count(),
+            Order::query()->where('status',3)->orderBy('id', 'DESC')->first()->date,
+
+            Order::query()->where('status','<>',0)->sum('total_item'),
+
+            Order::query()->where('status',1)->orderBy('id', 'DESC')->first()->date,
+
+        ];
+        $recent = Order::orderBy('id', 'DESC')->take(14)->get();
+
+        $top_pd = DB::table('order_details')
+        ->join('products','products.id','=','order_details.product_id')
+        ->join('orders','orders.id','=','order_details.order_id')
+        ->select('products.pd_name','products.pd_image', DB::raw('SUM(order_details.amount) as count'))
+        ->where('orders.status','!=',0)
+        ->orderBy('count', 'desc')
+        ->groupBy('products.pd_name')
+        ->limit(12)
+        ->get();
+
+        // dd($top_pd);
+
+
+
+        return view('home', compact('order_count','recent','top_pd'));
     }
 
     public function profile()
