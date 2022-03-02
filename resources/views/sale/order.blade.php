@@ -80,6 +80,7 @@
                 "order": [
                     [0, "desc"]
                 ],
+                pageLength: 25,
                 "language": {
                     "lengthMenu": "แสดง _MENU_ แถว",
                     "zeroRecords": "ไม่พบข้อมูล",

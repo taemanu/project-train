@@ -96,14 +96,14 @@
                     <span class="tooltips">จัดการสินค้าคงคลัง</span>
                 </li>
                 <li>
-                    <a href="#">
+                   <a href="{{route('ReportSale')}}">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานยอดขาย</span>
                     </a>
                     <span class="tooltips">รายงานยอดขาย</span>
                 </li>
                  <li>
-                    <a href="#">
+                   <a href="{{route('ReportWarehouse')}}">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานสินค้าคงคลัง</span>
                     </a>
@@ -139,14 +139,14 @@
                     <span class="tooltips">จัดการสินค้าคงคลัง</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('ReportSale')}}">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานยอดขาย</span>
                     </a>
                     <span class="tooltips">รายงานยอดขาย</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('ReportWarehouse')}}">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">รายงานสินค้าคงคลัง</span>
                     </a>

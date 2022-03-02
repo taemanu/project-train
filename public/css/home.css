@@ -125,6 +125,8 @@
     font-weight: 500;
 }
 
+
+
 .home_content .sales-boxes{
     display: flex;
     justify-content:space-between;
@@ -163,7 +165,6 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-
 }
 
 .home_content .sales-boxes .recent-sale{

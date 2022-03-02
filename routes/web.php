@@ -55,3 +55,7 @@ Route::get('/order',[App\Http\Controllers\OrderController::class, 'index'])->nam
 Route::post('/order/edit/{id}',[App\Http\Controllers\OrderController::class, 'editstatus']);
 Route::get('/order_detail{order_id}',[App\Http\Controllers\OrderController::class, 'order_detail'])->name('orderdetail');
 Route::get('/pdf/show/{id}',[App\Http\Controllers\OrderController::class,'pdfer']);
+
+//dashboard
+Route::get('/dashboard/sale',[App\Http\Controllers\DashboardController::class,'ReportSale'])->name('ReportSale');
+Route::get('/dashboard/warehouse',[App\Http\Controllers\DashboardController::class,'ReportWarehouse'])->name('ReportWarehouse');

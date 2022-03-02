@@ -37,7 +37,8 @@ class HomeController extends Controller
             Order::query()->where('status',1)->sum('total_price'),
 
             Order::all()->where('status', 3)->count(),
-            Order::query()->where('status',3)->orderBy('id', 'DESC')->first()->date,
+
+            Order::query()->where('status',3)->orWhere('status', '=', 1)->orderBy('id', 'DESC')->first()->date,
 
             Order::query()->where('status','<>',0)->sum('total_item'),
 
