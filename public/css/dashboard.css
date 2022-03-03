@@ -1,41 +1,10 @@
 .home_content .report-boxes-1{
     display: flex;
-    justify-content:space-around;
+    /* justify-content:space-around; */
     padding: 0px 5px 10px 5px;
 }
-.home_content .report-boxes-2{
-    /* justify-content:space-around; */
-    display: flex;
-    padding: 0px 20px 0px 20px;
-}
 
 
-.home_content .report-boxes-1 .month-sale{
-    width: 78%;
-    background:#fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    padding: 20px;
-
-}
-
-/* {{-- right-side --}} */
-.home_content .report-boxes-1 .status-sales{
-    background:#fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 12px;
-}
-
-
-.home_content .report-boxes-2 .day-sales{
-    width: 100%;
-    height:20%;
-    background:#fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 12px;
-}
 
 
 .report-boxes-1 .box .title{
@@ -46,4 +15,101 @@
 .report-boxes-2 .box .title{
     font-size: 18px;
     font-weight: 200;
+}
+
+
+.home_content .report-boxes-1 .cate-sales{
+    width: 26%;
+    margin: 6px;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+
+}
+
+.home_content .report-boxes-1 .min-sales{
+    width: 75%;
+    margin: 6px;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+
+}
+
+.home_content .report-boxes-2 .all-sales{
+
+    height:20%;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 15px 0px 15px;
+}
+
+/* //////sale */
+
+.home_content .report-boxes-1 .cate-sales1{
+    width: 22%;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+}
+
+.home_content .report-boxes-1 .min-sales1{
+    width: 76%;
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+}
+
+.home_content .report-boxes-2 .all-sales1{
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0px 15px 0px 15px;
+}
+
+
+.home_content .report-boxes-1 .min-sales .min-pd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home_content .report-boxes-1 .min-sales .min-pd li{
+    list-style: none;
+    margin: 8px 0;
+}
+
+.home_content .report-boxes-1 .box ul{
+    padding-left: 0;
+}
+
+.home_content .report-boxes-1 .box .topic{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.report-boxes-1 .box li a{
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.report-boxes-1 .min-pd img{
+    margin-right: 6px;
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    object-fit: contain;
 }

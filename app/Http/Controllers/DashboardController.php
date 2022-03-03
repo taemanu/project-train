@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Product;
 
 class DashboardController extends Controller
 {
@@ -74,6 +75,54 @@ class DashboardController extends Controller
 
      public function ReportWarehouse()
      {
-        return view('dashboard.warehouse_report');
+        $chart1 = DB::table('categories')
+        ->leftjoin('products','products.cate_id','=','categories.id')
+        ->select('categories.cate_name as name',DB::raw('count(products.id) as cnt_pd'))
+        ->where('categories.status',1)->where('products.status',1)
+        ->groupBy('categories.cate_name')
+        ->get();
+
+        $data1 =[];
+
+        foreach ($chart1 as $items) {
+            $data1['label'][] = $items->name;
+            $data1['data'][] = $items->cnt_pd;
+        }
+
+
+        $jsonResult= json_encode($data1);
+
+        ///////////////////////
+
+        $chart2 = DB::table('products')
+        ->select('pd_name',DB::raw('sum(pd_amount) as sum_am'))
+        ->where('status',1)
+        ->orderBy('sum_am', 'asc')
+        ->limit(25)
+        ->groupBy('id')
+        ->get();
+
+        $data2 = [];
+
+        foreach ($chart2 as $items){
+            $data2['label'][] = $items->pd_name;
+            $data2['data'][] = $items->sum_am;
+        }
+
+        $jsonResult1= json_encode($data2);
+        // dd($jsonResult1);
+
+        $minimum = DB::table("products")
+        ->join('categories','categories.id','products.cate_id')
+        ->select('products.*','categories.cate_name')
+        ->orderBy('products.pd_amount', 'asc')
+        ->limit(10)
+        ->get();
+
+
+        // dd($minimum);
+
+
+        return view('dashboard.warehouse_report',compact('jsonResult','jsonResult1','minimum'));
      }
 }

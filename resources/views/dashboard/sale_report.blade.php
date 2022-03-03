@@ -5,14 +5,15 @@
     <div class="home_content">
         <div class="report-boxes-1">
             {{-- top_content --}}
-            <div class="month-sale box">
-                <div class="title">ยอดขายต่อวัน</div>
-                <div> <canvas id="chart1" width="375px" height="100px"></canvas></div>
+            <div class="min-sales1 box">
+                <div class="title mb-1">ยอดขายต่อเดือน </div>
+                {{-- <div> <canvas id="chart1"height="85px"></canvas></div> --}}
+                <canvas id="chart3" height="95px"></canvas>
 
             </div>
 
             {{-- right-side --}}
-            <div class="status-sales box">
+            <div class="cate-sales1 box">
                 <div class="title">สถานะการชำระ</div>
                 <div> <canvas id="chart2"></canvas></div>
                 <div class="title" style='text-align: center; margin-top:20px'>
@@ -24,9 +25,10 @@
 
         <div class="report-boxes-2">
 
-            <div class="day-sales box">
-                <div class="title">ยอดขายต่อเดือน</div>
-                <canvas id="chart3" width="100%" height="17%"></canvas>
+            <div class="all-sales1 box ">
+                <div class="title mb-1">ยอดขายต่อวัน</div>
+                <div> <canvas id="chart1"height="39%"></canvas></div>
+                {{-- <canvas id="chart3" width="100%" height="14%"></canvas> --}}
 
                 <hr>
                 <div class="button" style='text-align: end;'>
@@ -64,7 +66,11 @@
             type: 'line',
             data: data1,
             options: {
-
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         };
 
@@ -113,11 +119,11 @@
                     myResult.data[2]
                 ],
                 backgroundColor: [
-                    'rgb(255, 99, 132,0.9)',
-                    'rgb(61, 181, 99,0.9)',
-                    'rgb(255, 205, 86,0.9)'
+                    'rgb(255, 99, 132,0.6)',
+                    'rgb(61, 181, 99,0.6)',
+                    'rgb(255, 205, 86,0.6)'
                 ],
-                hoverOffset: 4
+                hoverOffset: 5
             }]
         };
 
@@ -151,7 +157,7 @@
             'ก.ย',
             'ต.ค',
             'พ.ค',
-            'ม.ค',
+            'ธ.ค',
         ];
         const data3 = {
             labels: labels3,
@@ -159,7 +165,7 @@
                 label: 'รายได้ต่อเดือน',
                 data: myResult1.data,
                 backgroundColor: [
-                    'rgb(255, 99, 132,0.8)',
+                    'rgb(255, 99, 132,0.4)',
 
                 ],
                 borderColor: [
@@ -177,7 +183,13 @@
                     y: {
                         beginAtZero: true
                     }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
+
             },
         };
 
@@ -188,8 +200,6 @@
         // end ยอดขายต่อเดือน
 
         // end
-
-
     </script>
 @endsection
 @endsection

@@ -135,7 +135,7 @@
                                                         <span id="save_errlist"></span>
                                                     </div>
 
-                                                    <div class="mb-2">
+                                                    <div class="mb-2" style='display:none'>
                                                         <label for="pd_minimum"
                                                             class="form-label">จำนวนสินค้าขั้นต่ำ</label>
                                                         <input class="form-control" type="text" name="pd_minimum"
