@@ -34,7 +34,7 @@
 
             <div class="box three">
                 <div class="left-side">
-                    <div class="box_toppic">รอการชำระเงิน</div>
+                    <div class="box_toppic">ตรวจสอบการชำระ</div>
                     <div class="number">{{ number_format($order_count[3]) }} <span
                             class="text">รายการ</span></div>
                     <div class="indicator">
@@ -96,15 +96,15 @@
                         @endforeach
                     </ul>
 
-                    <ul class="details">
+                    <ul class="details" style='line-height: 2;'>
                         <li class="topic">สถานะ</li>
                         @foreach ($recent as $status)
                             @if ($status->status == 1)
-                                <li><h4><span class="badge bg-success">สำเร็จ</span></h4></li>
+                                <li><h5><span class="badge bg-success">สำเร็จ</span></h5></li>
                             @elseif ($status->status == 0)
-                                <li><h4><span class="badge bg-danger">ไม่สำเร็จ</span></h4></li>
+                                <li><h5><span class="badge bg-danger">ไม่สำเร็จ</span></h5></li>
                             @else
-                                <li><h4><span class="badge bg-warning">รอชำระเงิน</span></h4></li>
+                                <li><h5><span class="badge bg-warning">ตรวจสอบ</span></h5></li>
                             @endif
                         @endforeach
                     </ul>

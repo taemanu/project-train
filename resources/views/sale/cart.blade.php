@@ -1,5 +1,7 @@
 @extends('layouts.dashboard')
 
+
+
 @section('content')
     <!-- Content Area -->
     <div class="home_content">
@@ -57,7 +59,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">รูป</th>
-                                <th class="text-center">รายการ</th>
+                                <th class="text-center" colspan="2">รายการ</th>
                                 <th class="text-center">จำนวน</th>
                                 <th class="text-center">ราคารวม</th>
                                 <th class="text-center"></th>
@@ -70,7 +72,6 @@
                 </div>
                 <hr>
                 {{-- คำนวณเงิน --}}
-
                 <input type="hidden" name="total_item" value=""><input type="hidden" name="total_price" value="">
                 <input type="hidden" name="change" value="">
                 <ul class="list-unstyled">
@@ -108,13 +109,111 @@
                     </li>
                     <hr>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <button class="btn btn-primary" id="submit" type="submit">ชำระเงิน</button>
+                        {{-- <button class="btn btn-primary" id="submit" type="submit">ชำระเงิน</button> --}}
+                        <button type="button" class="btn btn-lg btn-primary" id="myBtn" data-bs-toggle="modal"
+                         data-bs-target="#myModal" >ชำระเงิน</button>
                     </div>
-                </form>
             </div>
         </div>
+            <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <button type="button" class="btn-close" id="modal-close" style="position: absolute;" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-header" style="padding:35px;">
+                                <h4 style="margin:0 auto;">รายละเอียดการชำระเงิน</h4>
+                            </div>
+                            <div class="modal-body" style="padding:40px 50px;">
+                                    <div class="row mx-0 modal-content-row">
+                                        <div class="col-12 col-md cart-border-right text-center">
+                                            <div class="horizontal-scroll">
+                                                <h5 class="text-center mb-4">ร้าน อุปกรณ์การเกษตร</h5>
+                                                <div class="invoiceLogo text-center"><img
+                                                        src="https://pos.gainhq.com/uploads/logo/default-logo.png" width="100" alt=""
+                                                        class="img-fluid"></div>
+                                                <div>
+                                                    <div class="text-center header-line-height">
+                                                        <small class="text-center">{{date('d-m-Y')}}
+                                                        </small>
+                                                        <br>
+                                                        <small class="text-center">
+                                                            99/9 หมู่ 9 ตำบล xxxxx
+                                                        </small>
+                                                        <br>
+                                                        <small class="text-left">
+                                                            อำเภอ เมือง จังหวัด เชียงใหม่ 50100
+                                                        </small>
+                                                        <br>
+                                                        <small>
+                                                            <span>
+                                                            โทร 090-xxx-xxxx
+                                                            </span>
+                                                        </small>
+                                                    </div>
+                                                    <div class="invoice-table">
+                                                        <table class="table product-card-font" style="font-weight: 500;">
+                                                            <thead class="border-top-0">
+                                                                <div class="list-order">
+                                                                <tr>
+                                                                    <th class="cart-summary-table text-left">รายการสินค้า</th>
+                                                                    <th class="cart-summary-table text-left"></th>
+                                                                    <th class="cart-summary-table text-left">จำนวน</th>
+                                                                    <th class="cart-summary-table text-right">ราคารวม</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody  class="orderlist1">
+                                                            </tbody>
+                                                                </div>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td class="cart-summary-table font-weight-bold text-left">รายการทั้งหมด
+                                                                    </td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="text-right cart-summary-table">
+                                                                        <b><span id="totalitem1" class="card-text p-2 bd-highlight">0</b>
+                                                                    </td>
+                                                                    <td class="card-text p-2 bd-highlight">ชิ้น</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="cart-summary-table font-weight-bold text-left">ราคาทั้งหมด
+                                                                    </td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="text-right cart-summary-table"><b><span id="totalcost1">0</span></b></td>
+                                                                    <td class="card-text p-2 bd-highlight">บาท</td>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="cart-summary-table font-weight-bold text-left">
+                                                                        เงินที่ได้รับ
+                                                                    </td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="text-right cart-summary-table"><b id="money1">0</b></td>
+                                                                    <td class="card-text p-2 bd-highlight">บาท</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="cart-summary-table font-weight-bold text-left">
+                                                                        เงินทอน
+                                                                    </td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="cart-summary-table"></td>
+                                                                    <td class="text-right cart-summary-table"><b><span id="change1">0</span></b></td>
+                                                                    <td class="card-text p-2 bd-highlight">บาท</td>
+                                                                </tr>
+                                                                <!---->
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-success btn-block">ชำระเงิน</button>
+                                                </form>
+                            </div>
+                        </div>
 
-    </div>
+                    </div>
+                </div>
     </div>
     <!-- End Content -->
 
@@ -146,17 +245,15 @@
                 item + "' name='product_qty[]' value='1'><input type='hidden'  name='product_price[]' value='" +
                 price + "'><input type='hidden' class='price_item" + item +
                 "' name='product_item_price[]' value='" + price + "'>";
-
-
-            str += "<td class='text-center'><img src='" + imgitem + "'style='width:30%' class='rounded'></td>";
-            str += "<td class='text-center'>" + productname + "</td>";
+            str += "<td id='img_product' class='text-center'><img src='" + imgitem + "'style='width:30%' class='rounded'></td>";
+            str += "<td id='product_name' class='text-center' colspan='2'>" + productname + "</td>";
             str +=
                 "<td class='text-center'><button type='button' class='btn btn-sm addperitem input_money'><i class='bx bx-plus-circle'></i></button><span class='amount" +
                 item +
                 " amount_num' style='margin-left:5px; margin-right:5px;'>1</span><button type='button' class='input_money btn btn-sm removeperitem'><i class='bx bx-minus-circle'></i></button></td>"; //<button class='btn btn-success btn-sm addperitem'>+</button><button class='btn btn-danger btn-sm removeperitem'>-</button>
             str += "<td class='price" + item + " text-center'>" + price + "</td>";
             str +=
-                "<td class='text-center'> <button class='btn btn-sm cancel btn-danger' type='button'>ลบ</button> </td>";
+                "<td class='text-center'><button class='btn btn-sm cancel btn-danger' type='button'>ลบ</button> </td>";
             str += "</tr>";
             var tr = $('#orderlist').find('tr');
             var amountplus = tr.find('.amount' + item).html();
@@ -267,23 +364,23 @@
             $('input[name="change"]').attr('value',change);
 
         }
+        //โชว์ใบเสร็จ
+        $("body").on("click","#myBtn" ,function(){
+           var totalitem1 = ($('#totalitem').html());
+           var totalcost = $('#totalcost').html();
+           var money1= $('#money').val();
+           var change1 =  $("#change").html();
+           $("#totalitem1").html(totalitem1);
+           $("#totalcost1").html(totalcost);
+           $("#money1").html(money1);
+           $("#change1").html(change1);
+            //เรียก ตารางมาแสดง
+           $(".orderlist1").html(($('#orderlist').html()));
+        });
 
         $("body").click(function() {
                 $("#success_messages1").css("display", "none");
             });
-
-
-
-
-
-        // function plus_price_item() {
-        //    var tr = $('#orderlist').closest('tr');
-        //    var price = tr.find('.price').html();
-        //    var amount = tr.find('.amount_num').html();
-        //    var sum = parseFloat(price) * parseFloat(amount);
-        //    tr.find('.price').html(sum);
-        //    console.log(sum,price,amount);
-        // }
     </script>
 @endsection
 @endsection

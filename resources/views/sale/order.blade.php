@@ -48,7 +48,7 @@
                                 @elseif ($item->status == 0)
                                     <h5><span class="badge bg-danger">ไม่สำเร็จ</span></h5>
                                 @else
-                                <h5><span class="badge bg-warning">รอการชำระเงิน</span></h5>
+                                <h5><span class="badge bg-warning">ตรวจสอบ</span></h5>
                                 @endif
                             </td>
                             <td style='text-align:center'>

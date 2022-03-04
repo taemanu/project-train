@@ -21,7 +21,7 @@
                             <select class="form-select" aria-label="Status" name="Status">
                                 <option value="1" {{ old('status', $item->status) === 1 ? 'selected' : '' }}>สำเร็จ
                                 </option>
-                                <option value="3" {{ old('status', $item->status) === 3 ? 'selected' : '' }}>รอดำเนินการ
+                                <option value="3" {{ old('status', $item->status) === 3 ? 'selected' : '' }}>ตรวจสอบ
                                 </option>
                                 <option value="0" {{ old('status', $item->status) === 0 ? 'selected' : '' }}>ไม่สำเร็จ
                                 </option>

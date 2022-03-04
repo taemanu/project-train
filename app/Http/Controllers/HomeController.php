@@ -45,7 +45,7 @@ class HomeController extends Controller
             Order::query()->where('status',1)->orderBy('id', 'DESC')->first()->date,
 
         ];
-        $recent = Order::orderBy('id', 'DESC')->take(14)->get();
+        $recent = Order::orderBy('id', 'DESC')->take(15)->get();
 
         $top_pd = DB::table('order_details')
         ->join('products','products.id','=','order_details.product_id')
